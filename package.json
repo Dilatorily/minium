@@ -1,0 +1,24 @@
+{
+  "name": "minium",
+  "version": "0.1.0",
+  "description": "Cross-platform Electron-based budgeting tool",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dilatorily/pleochroism.git"
+  },
+  "keywords": [
+    "electron",
+    "budgeting",
+    "react",
+    "redux",
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "author": "Huy Dang Lê-Ngô",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dilatorily/pleochroism/issues"
+  },
+  "homepage": "https://github.com/Dilatorily/pleochroism#readme"
+}
