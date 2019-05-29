@@ -1,0 +1,4 @@
+.*
+!.gitignore
+!.huskyrc.js
+node_modules

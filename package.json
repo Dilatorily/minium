@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/Dilatorily/pleochroism/issues"
   },
-  "homepage": "https://github.com/Dilatorily/pleochroism#readme"
+  "homepage": "https://github.com/Dilatorily/pleochroism#readme",
+  "devDependencies": {
+    "@commitlint/config-conventional": "7.6.0",
+    "commitlint": "7.6.1",
+    "husky": "2.3.0"
+  }
 }
