@@ -1,4 +1,4 @@
-const identity = require('..');
+import identity from '..';
 
 describe('tests', () => {
   it('passes', () => {
