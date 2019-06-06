@@ -2,6 +2,9 @@
   "name": "minium",
   "version": "0.1.0",
   "description": "Cross-platform Electron-based budgeting tool",
+  "scripts": {
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dilatorily/minium.git"
@@ -24,6 +27,7 @@
   "devDependencies": {
     "@commitlint/config-conventional": "7.6.0",
     "commitlint": "7.6.1",
-    "husky": "2.3.0"
+    "husky": "2.3.0",
+    "jest": "24.8.0"
   }
 }
