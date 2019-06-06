@@ -4,7 +4,7 @@
   "description": "Cross-platform Electron-based budgeting tool",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dilatorily/pleochroism.git"
+    "url": "git+https://github.com/Dilatorily/minium.git"
   },
   "keywords": [
     "electron",
@@ -18,9 +18,9 @@
   "author": "Huy Dang Lê-Ngô",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Dilatorily/pleochroism/issues"
+    "url": "https://github.com/Dilatorily/minium/issues"
   },
-  "homepage": "https://github.com/Dilatorily/pleochroism#readme",
+  "homepage": "https://github.com/Dilatorily/minium#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "7.6.0",
     "commitlint": "7.6.1",
