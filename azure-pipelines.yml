@@ -1,0 +1,11 @@
+trigger:
+- next
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: yarn
+  displayName: 'Install dependencies'
+- script: yarn test
+  displayName: 'Run unit tests'
