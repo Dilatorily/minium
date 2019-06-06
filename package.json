@@ -27,7 +27,7 @@
   "devDependencies": {
     "@commitlint/config-conventional": "7.6.0",
     "commitlint": "7.6.1",
-    "husky": "2.3.0",
+    "husky": "2.4.0",
     "jest": "24.8.0"
   }
 }
