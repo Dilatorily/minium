@@ -1,4 +1,5 @@
 .*
 !.gitignore
 !.huskyrc.js
+coverage
 node_modules

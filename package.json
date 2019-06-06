@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Cross-platform Electron-based budgeting tool",
   "scripts": {
+    "coverage": "codecov",
     "test": "jest"
   },
   "repository": {
@@ -26,6 +27,7 @@
   "homepage": "https://github.com/Dilatorily/minium#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "8.0.0",
+    "codecov": "3.5.0",
     "commitlint": "8.0.0",
     "husky": "2.4.0",
     "jest": "24.8.0"

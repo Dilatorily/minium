@@ -1,5 +1,7 @@
+const identity = require('..');
+
 describe('tests', () => {
   it('passes', () => {
-    expect(true).toBe(true);
+    expect(identity(true)).toBe(true);
   });
 });

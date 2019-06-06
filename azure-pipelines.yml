@@ -1,11 +1,13 @@
 trigger:
-- next
+  - next
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: yarn
-  displayName: 'Install dependencies'
-- script: yarn test
-  displayName: 'Run unit tests'
+  - script: yarn
+    displayName: 'Install dependencies'
+  - script: yarn test
+    displayName: 'Run unit tests'
+  - script: yarn coverage -- -t $(CODECOV_TOKEN)
+    displayName: 'Publish code coverage report'
