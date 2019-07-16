@@ -31,7 +31,7 @@
     "@babel/preset-env": "7.5.4",
     "@commitlint/config-conventional": "8.0.0",
     "codecov": "3.5.0",
-    "commitlint": "8.0.0",
+    "commitlint": "8.1.0",
     "husky": "3.0.0",
     "jest": "24.8.0"
   }
