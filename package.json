@@ -5,7 +5,9 @@
   "scripts": {
     "coverage": "codecov",
     "lint": "eslint \"src/**/*.@(j|t)s?(x)\"",
-    "test": "jest"
+    "pre-push": "yarn typings && yarn test",
+    "test": "jest",
+    "typings": "tsc"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,8 @@
     "@babel/plugin-proposal-class-properties": "7.5.5",
     "@babel/preset-env": "7.5.5",
     "@commitlint/config-conventional": "8.1.0",
+    "@typescript-eslint/eslint-plugin": "2.0.0",
+    "@typescript-eslint/parser": "2.0.0",
     "babel-eslint": "10.0.2",
     "codecov": "3.5.0",
     "commitlint": "8.1.0",
@@ -45,6 +49,7 @@
     "husky": "3.0.3",
     "jest": "24.8.0",
     "lint-staged": "9.2.1",
-    "prettier": "1.18.2"
+    "prettier": "1.18.2",
+    "typescript": "3.5.3"
   }
 }
