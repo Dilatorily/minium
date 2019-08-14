@@ -9,7 +9,9 @@ steps:
     displayName: 'Install dependencies'
   - script: yarn lint
     displayName: 'Run linting'
+  - script: yarn typings
+    displayName: 'Run type checks'
   - script: yarn test
     displayName: 'Run unit tests'
-  - script: yarn coverage -- -t $(CODECOV_TOKEN)
+  - script: yarn coverage -t $(CODECOV_TOKEN)
     displayName: 'Publish code coverage report'
