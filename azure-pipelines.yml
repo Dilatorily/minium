@@ -7,6 +7,8 @@ pool:
 steps:
   - script: yarn
     displayName: 'Install dependencies'
+  - script: yarn lint
+    displayName: 'Run linting'
   - script: yarn test
     displayName: 'Run unit tests'
   - script: yarn coverage -- -t $(CODECOV_TOKEN)
