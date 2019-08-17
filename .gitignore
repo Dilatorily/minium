@@ -2,5 +2,6 @@
 !.eslintrc.js
 !.gitignore
 !.huskyrc.js
+build
 coverage
 node_modules

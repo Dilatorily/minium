@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Cross-platform Electron-based budgeting tool",
   "scripts": {
+    "build": "webpack",
     "coverage": "codecov",
     "lint": "eslint \"src/**/*.@(j|t)s?(x)\"",
     "test": "jest",
@@ -32,12 +33,15 @@
     "@babel/plugin-proposal-class-properties": "7.5.5",
     "@babel/preset-env": "7.5.5",
     "@babel/preset-typescript": "7.3.3",
+    "@babel/register": "7.5.5",
     "@commitlint/config-conventional": "8.1.0",
     "@typescript-eslint/eslint-plugin": "2.0.0",
     "@typescript-eslint/parser": "2.0.0",
     "babel-eslint": "10.0.2",
+    "babel-loader": "8.0.6",
     "codecov": "3.5.0",
     "commitlint": "8.1.0",
+    "core-js": "3.2.1",
     "eslint": "6.1.0",
     "eslint-config-airbnb": "18.0.1",
     "eslint-config-prettier": "6.0.0",
@@ -50,6 +54,9 @@
     "jest": "24.9.0",
     "lint-staged": "9.2.1",
     "prettier": "1.18.2",
-    "typescript": "3.5.3"
+    "regenerator-runtime": "0.13.3",
+    "typescript": "3.5.3",
+    "webpack": "4.39.2",
+    "webpack-cli": "3.3.6"
   }
 }
