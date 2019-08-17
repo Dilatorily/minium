@@ -1,35 +1,6 @@
-import path from 'path';
+import main from './webpack.config.main.babel';
+import preload from './webpack.config.preload.babel';
+import renderer from './webpack.config.renderer.babel';
+import server from './webpack.config.server.babel';
 
-const isDevelopment = process.env.NODE_ENV === 'development';
-
-export default {
-  entry: ['./src/index'],
-  mode: isDevelopment ? 'development' : 'production',
-  output: {
-    path: path.join(__dirname, 'build'),
-    filename: 'index.js',
-  },
-  module: {
-    rules: [
-      {
-        test: /\.[jt]sx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        options: {
-          babelrc: false,
-          presets: [
-            [
-              '@babel/preset-env',
-              { corejs: 3, modules: false, targets: { node: true }, useBuiltIns: 'entry' },
-            ],
-            '@babel/preset-typescript',
-          ],
-          plugins: [['@babel/plugin-proposal-class-properties', { loose: true }]],
-        },
-      },
-    ],
-  },
-  resolve: { extensions: ['.json', '.js', '.jsx', '.ts', '.tsx'] },
-  devtool: isDevelopment ? 'eval-source-map' : false,
-  target: 'node',
-};
+export default [main, preload, renderer, server];

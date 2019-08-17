@@ -1,7 +1,14 @@
 module.exports = {
   parser: 'babel-eslint',
-  extends: ['airbnb', 'plugin:import/typescript', 'plugin:prettier/recommended', 'prettier/react'],
+  extends: [
+    'airbnb',
+    'airbnb/hooks',
+    'plugin:import/typescript',
+    'plugin:prettier/recommended',
+    'prettier/react',
+  ],
   env: {
+    browser: true,
     jest: true,
   },
   overrides: [
@@ -9,6 +16,7 @@ module.exports = {
       files: ['src/**/*.ts?(x)'],
       extends: [
         'airbnb',
+        'airbnb/hooks',
         'plugin:import/typescript',
         'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended',
