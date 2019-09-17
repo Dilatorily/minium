@@ -40,7 +40,7 @@
     "babel-eslint": "10.0.3",
     "babel-loader": "8.0.6",
     "codecov": "3.5.0",
-    "commitlint": "8.1.0",
+    "commitlint": "8.2.0",
     "core-js": "3.2.1",
     "eslint": "6.4.0",
     "eslint-config-airbnb": "18.0.1",
