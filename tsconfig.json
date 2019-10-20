@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "moduleResolution": "node",
     "allowJs": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "node",
     "noEmit": true,
     "strict": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "jsx": "preserve"
+    "target": "esnext"
   },
   "include": ["src"]
 }
