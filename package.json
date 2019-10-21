@@ -83,7 +83,7 @@
     "npm-run-all": "4.1.5",
     "prettier": "1.18.2",
     "rimraf": "3.0.0",
-    "typescript": "3.7.0-beta",
+    "typescript": "3.7.0-dev.20191018",
     "webpack": "4.41.2",
     "webpack-cli": "3.3.9",
     "webpack-dev-server": "3.8.2"
