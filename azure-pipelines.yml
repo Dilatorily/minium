@@ -8,7 +8,7 @@ steps:
   - task: UseNode@1
     inputs:
       version: '12.x'
-  - script: yarn
+  - script: yarn install --frozen-lockfile
     displayName: 'Install dependencies'
   - script: node_modules/.bin/electron-rebuild
     displayName: 'Rebuild dependencies for electron'
