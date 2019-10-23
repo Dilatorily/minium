@@ -59,7 +59,7 @@
     "@types/jest": "24.0.19",
     "@types/zeromq": "4.6.2",
     "@typescript-eslint/eslint-plugin": "2.5.0",
-    "@typescript-eslint/parser": "2.4.0",
+    "@typescript-eslint/parser": "2.5.0",
     "babel-eslint": "10.0.3",
     "babel-loader": "8.0.6",
     "codecov": "3.6.1",
