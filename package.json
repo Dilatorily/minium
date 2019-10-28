@@ -10,7 +10,7 @@
     "coverage": "codecov",
     "electron": "electron build",
     "lint": "eslint \"src/**/*.@(j|t)s?(x)\"",
-    "postinstall": "npm rebuild zeromq --runtime=electron",
+    "postinstall": "npm rebuild zeromq --runtime=electron && electron-rebuild",
     "prebuild": "npm run clean:build",
     "prebuild:main": "npm run clean:build",
     "preelectron": "run-p -n build:*",
