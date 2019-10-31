@@ -41,7 +41,7 @@
   "homepage": "https://github.com/Dilatorily/minium#readme",
   "dependencies": {
     "core-js": "3.3.5",
-    "electron": "6.0.12",
+    "electron": "7.0.0",
     "get-port": "5.0.0",
     "regenerator-runtime": "0.13.3",
     "zeromq": "5.1.1"
