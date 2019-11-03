@@ -41,7 +41,7 @@
   "homepage": "https://github.com/Dilatorily/minium#readme",
   "dependencies": {
     "core-js": "3.3.6",
-    "electron": "6.0.12",
+    "electron": "7.0.1",
     "get-port": "5.0.0",
     "react": "16.11.0",
     "react-dom": "16.11.0",
