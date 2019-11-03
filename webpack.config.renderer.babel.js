@@ -7,14 +7,16 @@ const port = parseInt(process.env.PORT, 10) || 8080;
 
 const basePlugins = [
   new webpack.EnvironmentPlugin(['NODE_ENV']),
-  new HtmlWebpackPlugin({ template: 'src/renderer/index.html' }),
+  new HtmlWebpackPlugin({
+    template: `src/renderer/index.${isDevelopment ? 'development' : 'production'}.html`,
+  }),
 ];
 const developmentPlugins = [new webpack.HotModuleReplacementPlugin()];
 const productionPlugins = [];
 const plugins = [...basePlugins, ...(isDevelopment ? developmentPlugins : productionPlugins)];
 
 export default {
-  entry: ['./src/renderer'],
+  entry: [isDevelopment ? 'react-hot-loader/patch' : undefined, './src/renderer'].filter(Boolean),
   mode: isDevelopment ? 'development' : 'production',
   output: {
     path: join(__dirname, 'build'),
@@ -38,25 +40,30 @@ export default {
                 useBuiltIns: 'entry',
               },
             ],
+            '@babel/preset-react',
             '@babel/preset-typescript',
           ],
           plugins: [
             ['@babel/plugin-proposal-class-properties', { loose: true }],
             '@babel/plugin-proposal-nullish-coalescing-operator',
             '@babel/plugin-proposal-optional-chaining',
-          ],
+            isDevelopment ? 'react-hot-loader/babel' : undefined,
+          ].filter(Boolean),
         },
       },
       { test: /\.node$/, loader: 'node-loader' },
     ],
   },
   plugins,
-  resolve: { extensions: ['.json', '.js', '.jsx', '.ts', '.tsx'] },
+  resolve: {
+    ...(isDevelopment ? { alias: { 'react-dom': '@hot-loader/react-dom' } } : {}),
+    extensions: ['.json', '.js', '.jsx', '.ts', '.tsx'],
+  },
   devServer: {
     compress: true,
     hot: true,
     https: true,
     port,
   },
-  devtool: isDevelopment ? 'source-map' : false,
+  devtool: isDevelopment ? 'eval-source-map' : false,
 };

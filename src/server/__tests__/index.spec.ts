@@ -18,6 +18,7 @@ describe('server', () => {
 
   it('calls the initializeSockets method with a callback', async () => {
     await import('..');
+    expect((sockets.initializeSockets as jest.Mock).mock.calls[0][0]).toEqual(expect.any(Function));
     (sockets.initializeSockets as jest.Mock).mock.calls[0][0]();
   });
 });

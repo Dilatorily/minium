@@ -1,9 +1,15 @@
 module.exports = {
   parser: 'babel-eslint',
-  extends: ['airbnb', 'airbnb/hooks', 'plugin:prettier/recommended', 'prettier/react'],
+  extends: [
+    'airbnb',
+    'airbnb/hooks',
+    'plugin:prettier/recommended',
+    'prettier/react',
+    'plugin:jest/recommended',
+    'plugin:testing-library/react',
+  ],
   env: {
     browser: true,
-    jest: true,
   },
   overrides: [
     {
@@ -16,6 +22,8 @@ module.exports = {
         'plugin:prettier/recommended',
         'prettier/@typescript-eslint',
         'prettier/react',
+        'plugin:jest/recommended',
+        'plugin:testing-library/react',
       ],
       rules: {
         'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],

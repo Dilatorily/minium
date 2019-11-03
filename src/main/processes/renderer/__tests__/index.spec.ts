@@ -1,3 +1,5 @@
+import development from '../development';
+
 describe('renderer', () => {
   let BrowserWindow: jest.Mock;
   let createRenderer: (ports: [number, number]) => Promise<void>;
@@ -35,7 +37,6 @@ describe('renderer', () => {
         })),
       },
     }));
-    jest.doMock('../development', () => ({ __esModule: true, default: 'test url' }));
 
     ({ BrowserWindow: BrowserWindow as unknown } = await import('electron'));
     ({ default: createRenderer } = await import('..'));
@@ -62,7 +63,7 @@ describe('renderer', () => {
 
   it("loads the environment's URL", async () => {
     await createRenderer(ports);
-    expect(window.loadURL).toHaveBeenCalledWith('test url');
+    expect(window.loadURL).toHaveBeenCalledWith(development);
   });
 
   it('listens to closed events', async () => {
@@ -132,5 +133,3 @@ describe('renderer', () => {
     expect(window.webContents.send).not.toHaveBeenCalledWith('serverPort', 5678);
   });
 });
-
-export {};
