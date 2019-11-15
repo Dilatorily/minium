@@ -33,15 +33,17 @@ export default {
           presets: [
             [
               '@babel/preset-env',
-              { corejs: 3, modules: false, targets: 'node 12', useBuiltIns: 'entry' },
+              {
+                bugfixes: true,
+                corejs: 3,
+                modules: false,
+                targets: 'node 12',
+                useBuiltIns: 'entry',
+              },
             ],
             '@babel/preset-typescript',
           ],
-          plugins: [
-            ['@babel/plugin-proposal-class-properties', { loose: true }],
-            '@babel/plugin-proposal-nullish-coalescing-operator',
-            '@babel/plugin-proposal-optional-chaining',
-          ],
+          plugins: [['@babel/plugin-proposal-class-properties', { loose: true }]],
         },
       },
     ],

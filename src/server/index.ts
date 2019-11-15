@@ -4,5 +4,7 @@ import getSockets from './sockets';
 
 (async (): Promise<void> => {
   const { initializeSockets } = await getSockets();
-  initializeSockets(() => {});
+  initializeSockets(() => {
+    // TODO: Process a message through the socket
+  });
 })();

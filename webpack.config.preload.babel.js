@@ -21,6 +21,7 @@ export default {
             [
               '@babel/preset-env',
               {
+                bugfixes: true,
                 corejs: 3,
                 modules: false,
                 targets: 'last 1 electron version',
@@ -29,11 +30,7 @@ export default {
             ],
             '@babel/preset-typescript',
           ],
-          plugins: [
-            ['@babel/plugin-proposal-class-properties', { loose: true }],
-            '@babel/plugin-proposal-nullish-coalescing-operator',
-            '@babel/plugin-proposal-optional-chaining',
-          ],
+          plugins: [['@babel/plugin-proposal-class-properties', { loose: true }]],
         },
       },
       { test: /\.node$/, loader: 'node-loader' },
