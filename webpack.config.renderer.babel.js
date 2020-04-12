@@ -34,6 +34,7 @@ export default {
             [
               '@babel/preset-env',
               {
+                bugfixes: true,
                 corejs: 3,
                 modules: false,
                 targets: 'last 1 electron version',
@@ -45,8 +46,6 @@ export default {
           ],
           plugins: [
             ['@babel/plugin-proposal-class-properties', { loose: true }],
-            '@babel/plugin-proposal-nullish-coalescing-operator',
-            '@babel/plugin-proposal-optional-chaining',
             isDevelopment ? 'react-hot-loader/babel' : undefined,
           ].filter(Boolean),
         },

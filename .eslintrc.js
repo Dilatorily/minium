@@ -11,6 +11,19 @@ module.exports = {
   env: {
     browser: true,
   },
+  rules: {
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        mjs: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+  },
   overrides: [
     {
       files: ['src/**/*.ts?(x)'],
@@ -26,6 +39,17 @@ module.exports = {
         'plugin:testing-library/react',
       ],
       rules: {
+        'import/extensions': [
+          'error',
+          'ignorePackages',
+          {
+            js: 'never',
+            mjs: 'never',
+            jsx: 'never',
+            ts: 'never',
+            tsx: 'never',
+          },
+        ],
         'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
       },
     },
