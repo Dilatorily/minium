@@ -66,7 +66,7 @@
     "@types/react-dom": "16.9.6",
     "@types/zeromq": "4.6.3",
     "@typescript-eslint/eslint-plugin": "2.28.0",
-    "@typescript-eslint/parser": "2.28.0",
+    "@typescript-eslint/parser": "2.29.0",
     "babel-eslint": "10.1.0",
     "babel-loader": "8.1.0",
     "codecov": "3.6.5",
