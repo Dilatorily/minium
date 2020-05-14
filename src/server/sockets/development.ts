@@ -4,13 +4,15 @@ import zmq, { Socket } from 'zeromq';
 let rendererSocket: Socket;
 let serverSocket: Socket;
 
-export const initializeSockets = (onMessage: (...buffer: Buffer[]) => void): void => {
+export const initializeSockets = (onMessage: (message: unknown) => void): void => {
   rendererSocket = zmq.socket('pull');
   serverSocket = zmq.socket('push');
 
   ipcRenderer.on('rendererPort', (event, rendererPort) => {
     rendererSocket.connect(`tcp://127.0.0.1:${rendererPort}`);
-    rendererSocket.on('message', onMessage);
+    rendererSocket.on('message', (...buffer: Buffer[]) =>
+      onMessage(buffer.toString() ? JSON.parse(buffer.toString()) : undefined),
+    );
   });
 
   ipcRenderer.on('serverPort', (event, serverPort) => {
@@ -18,6 +20,6 @@ export const initializeSockets = (onMessage: (...buffer: Buffer[]) => void): voi
   });
 };
 
-export const sendMessage = (message: string): void => {
-  serverSocket.send(message);
+export const sendMessage = (message: unknown): void => {
+  serverSocket.send(JSON.stringify(message));
 };

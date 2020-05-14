@@ -41,11 +41,18 @@ describe('development', () => {
       expect(mockSocket.on).toHaveBeenCalledWith('message', expect.any(Function));
     });
 
-    it('calls the onMessage callback on message events on the renderer socket', () => {
+    it('calls the onMessage callback on empty message events on the renderer socket', () => {
       initializeSockets(onMessage);
       (ipcRenderer.on as jest.Mock).mock.calls[0][1](null, 1234);
       mockSocket.on.mock.calls[0][1]();
       expect(onMessage).toHaveBeenCalled();
+    });
+
+    it('calls the onMessage callback on non-empty message events on the renderer socket', () => {
+      initializeSockets(onMessage);
+      (ipcRenderer.on as jest.Mock).mock.calls[0][1](null, 1234);
+      mockSocket.on.mock.calls[0][1](Buffer.from('"test"'));
+      expect(onMessage).toHaveBeenCalledWith('test');
     });
 
     it('listens to serverPort events', () => {
@@ -67,7 +74,7 @@ describe('development', () => {
 
     it('sends a message on the renderer socket', () => {
       sendMessage('test message');
-      expect(mockSocket.send).toHaveBeenCalledWith('test message');
+      expect(mockSocket.send).toHaveBeenCalledWith('"test message"');
     });
   });
 });

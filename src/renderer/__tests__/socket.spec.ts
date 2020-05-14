@@ -72,13 +72,22 @@ describe('socket', () => {
       expect(socket.on).toHaveBeenCalledWith('message', expect.any(Function));
     });
 
-    it('calls the onMessage callback on message events on the server socket', () => {
+    it('calls the onMessage callback on empty message events on the server socket', () => {
       initializeSockets(onMessage);
       ((window as unknown) as Window &
         WindowIpcRenderer &
         WindowZmq).ipcRenderer.on.mock.calls[1][1](null, 1234);
       socket.on.mock.calls[0][1]();
       expect(onMessage).toHaveBeenCalled();
+    });
+
+    it('calls the onMessage callback on non-empty message events on the server socket', () => {
+      initializeSockets(onMessage);
+      ((window as unknown) as Window &
+        WindowIpcRenderer &
+        WindowZmq).ipcRenderer.on.mock.calls[1][1](null, 1234);
+      socket.on.mock.calls[0][1](Buffer.from('"test"'));
+      expect(onMessage).toHaveBeenCalledWith('test');
     });
   });
 
@@ -89,7 +98,7 @@ describe('socket', () => {
 
     it('sends a message on the renderer socket', () => {
       sendMessage('test message');
-      expect(socket.send).toHaveBeenCalledWith('test message');
+      expect(socket.send).toHaveBeenCalledWith('"test message"');
     });
   });
 });

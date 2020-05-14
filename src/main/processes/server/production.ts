@@ -4,9 +4,13 @@ import { app } from 'electron';
 
 let process: ChildProcess | null = null;
 
-export const createServer = async (port: number): Promise<void> => {
+export const createServer = async (ports: [number, number]): Promise<void> => {
   if (!process) {
-    process = fork(join(app.getAppPath(), 'server.js'), ['--production', `${port}`]);
+    process = fork(join(app.getAppPath(), 'server.js'), [
+      '--production',
+      `${ports[0]}`,
+      `${ports[1]}`,
+    ]);
   }
 };
 

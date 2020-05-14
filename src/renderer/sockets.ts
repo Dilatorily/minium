@@ -12,7 +12,7 @@ export interface WindowZmq {
   zmq: { socket: (type: string) => Socket };
 }
 
-export const initializeSockets = (onMessage: (...buffer: Buffer[]) => void): void => {
+export const initializeSockets = (onMessage: (message: unknown) => void): void => {
   const { ipcRenderer, zmq } = (window as unknown) as Window & WindowIpcRenderer & WindowZmq;
   rendererSocket = zmq.socket('push');
   serverSocket = zmq.socket('pull');
@@ -23,10 +23,12 @@ export const initializeSockets = (onMessage: (...buffer: Buffer[]) => void): voi
 
   ipcRenderer.on('serverPort', (event, serverPort) => {
     serverSocket.connect(`tcp://127.0.0.1:${serverPort}`);
-    serverSocket.on('message', onMessage);
+    serverSocket.on('message', (...buffer: Buffer[]) =>
+      onMessage(buffer.toString() ? JSON.parse(buffer.toString()) : undefined),
+    );
   });
 };
 
-export const sendMessage = (message: string): void => {
-  rendererSocket.send(message);
+export const sendMessage = (message: unknown): void => {
+  rendererSocket.send(JSON.stringify(message));
 };

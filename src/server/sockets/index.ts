@@ -1,6 +1,6 @@
 export interface Sockets {
-  initializeSockets: (onMessage: (...buffer: Buffer[]) => void) => void;
-  sendMessage: (message: string) => void;
+  initializeSockets: (onMessage: (message: unknown) => void) => void;
+  sendMessage: (message: unknown) => void;
 }
 
 export default async (): Promise<Sockets> => {
