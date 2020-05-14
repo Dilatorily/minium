@@ -2,7 +2,7 @@ import { BrowserWindow, screen } from 'electron';
 
 let window: BrowserWindow | null = null;
 
-const createWindow = (port: number): void => {
+const createWindow = (ports: [number, number]): void => {
   const { height, width } = screen.getPrimaryDisplay().workAreaSize;
   window = new BrowserWindow({
     height,
@@ -13,14 +13,15 @@ const createWindow = (port: number): void => {
   window.loadURL(`https://localhost:${process.env.SERVER_PORT}`);
   window.webContents.on('did-finish-load', () => {
     if (window) {
-      window.webContents.send('port', port);
+      window.webContents.send('rendererPort', ports[0]);
+      window.webContents.send('serverPort', ports[1]);
     }
   });
 };
 
-export const createServer = async (port: number): Promise<void> => {
+export const createServer = async (ports: [number, number]): Promise<void> => {
   if (window === null) {
-    createWindow(port);
+    createWindow(ports);
   } else {
     window.webContents.openDevTools();
   }
