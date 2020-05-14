@@ -3,7 +3,7 @@ import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
-const port = parseInt(process.env.PORT, 10) || 8081;
+const port = parseInt(process.env.PORT, 10) || 3001;
 
 const basePlugins = [new webpack.EnvironmentPlugin(['NODE_ENV'])];
 const developmentPlugins = [
