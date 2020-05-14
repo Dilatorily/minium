@@ -4,8 +4,9 @@ import render from './render';
 import { initializeSockets } from './sockets';
 
 const main = (): void => {
-  initializeSockets(() => {
+  initializeSockets((message) => {
     // TODO: Process a message through the socket
+    console.log(message);
   });
   render();
 };

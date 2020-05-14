@@ -41,11 +41,11 @@ describe('development', () => {
       expect(mockSocket.on).toHaveBeenCalledWith('message', expect.any(Function));
     });
 
-    it('calls the onMessage callback on empty message events on the renderer socket', () => {
+    it('does not call the onMessage callback on empty message events on the renderer socket', () => {
       initializeSockets(onMessage);
       (ipcRenderer.on as jest.Mock).mock.calls[0][1](null, 1234);
       mockSocket.on.mock.calls[0][1]();
-      expect(onMessage).toHaveBeenCalled();
+      expect(onMessage).not.toHaveBeenCalled();
     });
 
     it('calls the onMessage callback on non-empty message events on the renderer socket', () => {
@@ -73,8 +73,8 @@ describe('development', () => {
     });
 
     it('sends a message on the renderer socket', () => {
-      sendMessage('test message');
-      expect(mockSocket.send).toHaveBeenCalledWith('"test message"');
+      sendMessage({ type: 'test message' });
+      expect(mockSocket.send).toHaveBeenCalledWith('{"type":"test message"}');
     });
   });
 });
