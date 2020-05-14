@@ -2,8 +2,8 @@ import { join } from 'path';
 import webpack from 'webpack';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
-const rendererPort = parseInt(process.env.RENDERER_PORT, 10) || 8080;
-const serverPort = parseInt(process.env.SERVER_PORT, 10) || 8081;
+const rendererPort = parseInt(process.env.RENDERER_PORT, 10) || 3000;
+const serverPort = parseInt(process.env.SERVER_PORT, 10) || 3001;
 
 const basePlugins = [];
 const developmentPlugins = [
