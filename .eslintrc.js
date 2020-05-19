@@ -39,6 +39,7 @@ module.exports = {
         'plugin:testing-library/react',
       ],
       rules: {
+        '@typescript-eslint/no-explicit-any': ['error', { ignoreRestArgs: true }],
         'import/extensions': [
           'error',
           'ignorePackages',

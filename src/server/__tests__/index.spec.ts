@@ -1,24 +1,16 @@
-import { Sockets } from '../sockets';
+import { beforeEach, describe, expect, it } from '@jest/globals';
 
 describe('server', () => {
-  let getSockets: () => Promise<Sockets>;
-  let sockets: Sockets;
+  let main: jest.Mock;
 
   beforeEach(() => {
-    sockets = { initializeSockets: jest.fn(), sendMessage: jest.fn() };
-    getSockets = (): Promise<Sockets> => Promise.resolve(sockets);
     jest.resetModules();
-    jest.doMock('../sockets', () => ({ __esModule: true, default: getSockets }));
+    main = jest.fn();
+    jest.doMock('../main', () => ({ __esModule: true, default: main }));
   });
 
-  it('calls the initializeSockets method', async () => {
+  it('calls the main method', async () => {
     await import('..');
-    expect(sockets.initializeSockets).toHaveBeenCalledWith(expect.any(Function));
-  });
-
-  it('calls the initializeSockets method with a callback', async () => {
-    await import('..');
-    expect((sockets.initializeSockets as jest.Mock).mock.calls[0][0]).toEqual(expect.any(Function));
-    (sockets.initializeSockets as jest.Mock).mock.calls[0][0]();
+    expect(main).toHaveBeenCalled();
   });
 });
