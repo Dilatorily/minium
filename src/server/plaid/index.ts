@@ -20,7 +20,6 @@ const readConfiguration = async (): Promise<void> => {
     throw new ConfigurationError();
   }
 
-  const accounts: string[] = accountsString ? JSON.parse(accountsString) : [];
   configuration = {
     accounts: accountsString ? JSON.parse(accountsString) : [],
     plaid: { clientId, publicKey, secret },
