@@ -26,8 +26,8 @@ const messages: Messages<ClientConfiguration> = {
     await addAccount(account);
     sendMessage(addedAccount());
   },
-  [SAVE_CONFIGURATION]: ({ clientId, publicKey, secret }) => async (sendMessage): Promise<void> => {
-    await saveConfiguration(clientId, publicKey, secret);
+  [SAVE_CONFIGURATION]: ({ clientId, secret }) => async (sendMessage): Promise<void> => {
+    await saveConfiguration(clientId, secret);
     sendMessage(savedConfiguration());
   },
 };

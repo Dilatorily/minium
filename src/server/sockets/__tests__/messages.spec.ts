@@ -25,14 +25,9 @@ describe('onMessage', () => {
   it('handles the SAVE_CONFIGURATION message type', async () => {
     await onMessage(SAVE_CONFIGURATION, {
       clientId: 'test clientId',
-      publicKey: 'test publicKey',
       secret: 'test secret',
     })(sendMessage);
-    expect(saveConfiguration).toHaveBeenCalledWith(
-      'test clientId',
-      'test publicKey',
-      'test secret',
-    );
+    expect(saveConfiguration).toHaveBeenCalledWith('test clientId', 'test secret');
     expect(sendMessage).toHaveBeenCalledWith({ type: SAVED_CONFIGURATION });
   });
 });

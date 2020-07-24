@@ -7672,10 +7672,10 @@ pkg-up@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
-plaid@5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/plaid/-/plaid-5.2.0.tgz#b8dc144b13f59ab2e10085a2915f224fc709fee5"
-  integrity sha512-+/OMao68cGWMtvZmNufLhibtMYH7jIU0xZy1E4qPxIV9V/LUY9DtbCe+kkPbOLqqiRDNK/vjazCstgYb5Kz59Q==
+plaid@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/plaid/-/plaid-6.0.0.tgz#1405fb785f23de7807b5d891735f94a9409ba507"
+  integrity sha512-RanHJPSGQoIfQNIGmTYZOPxsrSjwuGucNTkz1T+BUIL/Q9QbEoFKgL+rLF4AhQAL8/AxZy+2AToF7yiR25k5ag==
   dependencies:
     "@types/node" "9.x"
     axios "^0.19.2"

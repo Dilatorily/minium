@@ -9,20 +9,19 @@ let client: Client;
 let configuration: Configuration;
 
 const readConfiguration = async (): Promise<void> => {
-  const [accountsString, clientId, publicKey, secret] = await Promise.all([
+  const [accountsString, clientId, secret] = await Promise.all([
     getPassword(SERVICE_NAME, KEYTAR_ACCOUNTS.ACCOUNTS),
     getPassword(SERVICE_NAME, KEYTAR_ACCOUNTS.CLIENT_ID),
-    getPassword(SERVICE_NAME, KEYTAR_ACCOUNTS.PUBLIC_KEY),
     getPassword(SERVICE_NAME, KEYTAR_ACCOUNTS.SECRET),
   ]);
 
-  if (!clientId || !publicKey || !secret) {
+  if (!clientId || !secret) {
     throw new ConfigurationError();
   }
 
   configuration = {
     accounts: accountsString ? JSON.parse(accountsString) : [],
-    plaid: { clientId, publicKey, secret },
+    plaid: { clientId, secret },
   };
 
   if (configuration.accounts.length <= 0) {
@@ -33,26 +32,20 @@ const readConfiguration = async (): Promise<void> => {
 export const createClient = async (force = false): Promise<Client> => {
   if (!client || force) {
     await readConfiguration();
-    client = new Client(
-      configuration.plaid.clientId,
-      configuration.plaid.secret,
-      configuration.plaid.publicKey,
-      environments.development,
-      { version: '2019-05-29' },
-    );
+    client = new Client({
+      clientID: configuration.plaid.clientId,
+      env: environments.development,
+      options: { version: '2019-05-29' },
+      secret: configuration.plaid.secret,
+    });
   }
 
   return client;
 };
 
-export const saveConfiguration = async (
-  clientId: string,
-  publicKey: string,
-  secret: string,
-): Promise<void> => {
+export const saveConfiguration = async (clientId: string, secret: string): Promise<void> => {
   await Promise.all([
     setPassword(SERVICE_NAME, KEYTAR_ACCOUNTS.CLIENT_ID, clientId),
-    setPassword(SERVICE_NAME, KEYTAR_ACCOUNTS.PUBLIC_KEY, publicKey),
     setPassword(SERVICE_NAME, KEYTAR_ACCOUNTS.SECRET, secret),
   ]);
   await createClient(true);

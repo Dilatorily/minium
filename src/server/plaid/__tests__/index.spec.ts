@@ -24,8 +24,6 @@ describe('plaid', () => {
             return JSON.stringify(['test account 1', 'test account 2']);
           case KEYTAR_ACCOUNTS.CLIENT_ID:
             return 'test client id';
-          case KEYTAR_ACCOUNTS.PUBLIC_KEY:
-            return 'test public key';
           case KEYTAR_ACCOUNTS.SECRET:
             return 'test secret';
           default:
@@ -39,24 +37,6 @@ describe('plaid', () => {
         switch (account) {
           case KEYTAR_ACCOUNTS.ACCOUNTS:
             return JSON.stringify(['test account 1', 'test account 2']);
-          case KEYTAR_ACCOUNTS.PUBLIC_KEY:
-            return 'test public key';
-          case KEYTAR_ACCOUNTS.SECRET:
-            return 'test secret';
-          default:
-            return null;
-        }
-      });
-      await expect(createClient()).rejects.toThrowError(ConfigurationError);
-    });
-
-    it('throws a ConfigurationError if the publicKey is missing', async () => {
-      (getPassword as jest.Mock).mockImplementation(async (service: string, account: string) => {
-        switch (account) {
-          case KEYTAR_ACCOUNTS.ACCOUNTS:
-            return JSON.stringify(['test account 1', 'test account 2']);
-          case KEYTAR_ACCOUNTS.CLIENT_ID:
-            return 'test client id';
           case KEYTAR_ACCOUNTS.SECRET:
             return 'test secret';
           default:
@@ -73,8 +53,6 @@ describe('plaid', () => {
             return JSON.stringify(['test account 1', 'test account 2']);
           case KEYTAR_ACCOUNTS.CLIENT_ID:
             return 'test client id';
-          case KEYTAR_ACCOUNTS.PUBLIC_KEY:
-            return 'test public key';
           default:
             return null;
         }
@@ -87,8 +65,6 @@ describe('plaid', () => {
         switch (account) {
           case KEYTAR_ACCOUNTS.CLIENT_ID:
             return 'test client id';
-          case KEYTAR_ACCOUNTS.PUBLIC_KEY:
-            return 'test public key';
           case KEYTAR_ACCOUNTS.SECRET:
             return 'test secret';
           default:
@@ -102,7 +78,6 @@ describe('plaid', () => {
       const results = await createClient();
       expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.ACCOUNTS);
       expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.CLIENT_ID);
-      expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.PUBLIC_KEY);
       expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.SECRET);
       expect(results).toEqual(expect.any(Client));
     });
@@ -112,7 +87,6 @@ describe('plaid', () => {
       const results2 = await createClient();
       expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.ACCOUNTS);
       expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.CLIENT_ID);
-      expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.PUBLIC_KEY);
       expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.SECRET);
       expect(results1).toEqual(expect.any(Client));
       expect(results1).toBe(results2);
@@ -121,25 +95,19 @@ describe('plaid', () => {
 
   describe('saveConfiguration', () => {
     it('saves the configuration', async () => {
-      await saveConfiguration('test clientId', 'test publicKey', 'test secret');
+      await saveConfiguration('test clientId', 'test secret');
       expect(setPassword).toHaveBeenCalledWith(
         SERVICE_NAME,
         KEYTAR_ACCOUNTS.CLIENT_ID,
         'test clientId',
       );
-      expect(setPassword).toHaveBeenCalledWith(
-        SERVICE_NAME,
-        KEYTAR_ACCOUNTS.PUBLIC_KEY,
-        'test publicKey',
-      );
       expect(setPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.SECRET, 'test secret');
     });
 
     it('reads the configuration', async () => {
-      await saveConfiguration('test clientId', 'test publicKey', 'test secret');
+      await saveConfiguration('test clientId', 'test secret');
       expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.ACCOUNTS);
       expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.CLIENT_ID);
-      expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.PUBLIC_KEY);
       expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.SECRET);
     });
   });
@@ -158,7 +126,6 @@ describe('plaid', () => {
       await addAccount('test account 3');
       expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.ACCOUNTS);
       expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.CLIENT_ID);
-      expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.PUBLIC_KEY);
       expect(getPassword).toHaveBeenCalledWith(SERVICE_NAME, KEYTAR_ACCOUNTS.SECRET);
     });
   });
