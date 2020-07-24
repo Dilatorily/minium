@@ -13,7 +13,6 @@ export interface OnMessage {
 
 export interface PlaidConfiguration {
   clientId: string;
-  publicKey: string;
   secret: string;
 }
 
