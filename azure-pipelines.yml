@@ -16,7 +16,7 @@ steps:
     displayName: 'Run type checks'
   - script: yarn test
     displayName: 'Run unit tests'
-  - script: yarn coverage -t $(CODECOV_TOKEN)
+  - script: bash <(curl -s https://codecov.io/bash)
     displayName: 'Publish code coverage report'
   - script: yarn build
     displayName: 'Build package'
