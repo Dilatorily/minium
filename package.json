@@ -43,7 +43,7 @@
     "electron": "10.1.3",
     "get-port": "5.1.1",
     "keytar": "6.0.1",
-    "plaid": "7.1.0",
+    "plaid": "8.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "regenerator-runtime": "0.13.7",

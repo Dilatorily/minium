@@ -8173,10 +8173,10 @@ pkg-up@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
-plaid@7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/plaid/-/plaid-7.1.0.tgz#b65801f8c7af4d10e1b4427463b07d43ba9459ff"
-  integrity sha512-ZKADUfK/KasVuH7YVTL9uFaZ6jLdK7DTMcBAi4lHdVTZW4pgE0c0ewmfAs5zCaOhwCAhUxXPRrodJSFk0qNP+w==
+plaid@8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/plaid/-/plaid-8.0.0.tgz#8af024779ad318743032bc5c3934a1f5971537b5"
+  integrity sha512-9A6gBInSoWkq6hOzBfXPQ+3whVAYbnsRSmfQ/aRdbaEiRmN9hnPbVQNJS+5lHiyPGENZSe3e57Z6DEBedNJV5w==
   dependencies:
     "@types/node" "9.x"
     axios "^0.19.2"
