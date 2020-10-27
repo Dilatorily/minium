@@ -57,7 +57,7 @@
     "@babel/preset-typescript": "7.12.1",
     "@babel/register": "7.12.1",
     "@commitlint/config-conventional": "11.0.0",
-    "@hot-loader/react-dom": "16.13.0",
+    "@hot-loader/react-dom": "16.14.0",
     "@jest/globals": "26.6.0",
     "@testing-library/jest-dom": "5.11.4",
     "@testing-library/react": "11.1.0",
