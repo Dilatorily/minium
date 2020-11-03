@@ -58,7 +58,7 @@
     "@babel/register": "7.12.1",
     "@commitlint/config-conventional": "11.0.0",
     "@hot-loader/react-dom": "16.14.0",
-    "@jest/globals": "26.6.1",
+    "@jest/globals": "26.6.2",
     "@testing-library/jest-dom": "5.11.5",
     "@testing-library/react": "11.1.0",
     "@types/electron-devtools-installer": "2.2.0",
