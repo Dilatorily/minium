@@ -42,7 +42,7 @@
     "core-js": "3.7.0",
     "electron": "10.1.5",
     "get-port": "5.1.1",
-    "keytar": "7.0.0",
+    "keytar": "7.1.0",
     "plaid": "8.0.0",
     "react": "16.14.0",
     "react-dom": "16.14.0",
