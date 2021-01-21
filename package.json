@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/Dilatorily/minium#readme",
   "dependencies": {
-    "core-js": "3.8.2",
+    "core-js": "3.8.3",
     "electron": "11.2.0",
     "get-port": "5.1.1",
     "keytar": "7.3.0",
