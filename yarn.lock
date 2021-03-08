@@ -8219,10 +8219,10 @@ pkg-dir@^4.1.0, pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
-plaid@8.1.6:
-  version "8.1.6"
-  resolved "https://registry.yarnpkg.com/plaid/-/plaid-8.1.6.tgz#03f5e36653f9f32bf2c1d5841be2314ba1a85025"
-  integrity sha512-gAeAOgGh9oA93PAop4G2mJTZ26RsID2KebFgYy4NP8JDhkKr1rqeZe5P2NxScGyujP0Q7gdRtf4Xu62MuJ0mWQ==
+plaid@8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/plaid/-/plaid-8.2.0.tgz#fcf781c21918b1acf8aec85c4c5818ca2ab75d4f"
+  integrity sha512-Vjz5gpGtved+maEo/QWPRGhvJy/wz7GCqchaiLbKe9vqYV38vHpueGr9dfVQouLdB2dIJeyIcN4yXU39WxHvgw==
   dependencies:
     "@types/node" "9.x"
     axios "0.21.1"
