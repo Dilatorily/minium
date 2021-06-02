@@ -65,7 +65,7 @@
     "@types/jest": "26.0.20",
     "@types/node": "14.14.31",
     "@types/react": "17.0.2",
-    "@types/react-dom": "17.0.1",
+    "@types/react-dom": "17.0.6",
     "@types/zeromq": "4.6.3",
     "@typescript-eslint/eslint-plugin": "4.16.1",
     "@typescript-eslint/parser": "2.34.0",
