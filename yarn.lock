@@ -2752,27 +2752,16 @@ browserify-zlib@^0.2.0:
   dependencies:
     pako "~1.0.5"
 
-browserslist@^4.14.5:
-  version "4.14.7"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.14.7.tgz#c071c1b3622c1c2e790799a37bb09473a4351cb6"
-  integrity sha512-BSVRLCeG3Xt/j/1cCGj1019Wbty0H+Yvu2AOuZSuoaUWn3RatbL33Cxk+Q4jRMRAbOm0p7SLravLjpnT6s0vzQ==
+browserslist@^4.14.5, browserslist@^4.16.3:
+  version "4.16.6"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.16.6.tgz#d7901277a5a88e554ed305b183ec9b0c08f66fa2"
+  integrity sha512-Wspk/PqO+4W9qp5iUTJsa1B/QrYn1keNCcEP5OvP7WBwT4KaDly0uONYmC6Xa3Z5IqnUgS0KcgLYu1l74x0ZXQ==
   dependencies:
-    caniuse-lite "^1.0.30001157"
-    colorette "^1.2.1"
-    electron-to-chromium "^1.3.591"
+    caniuse-lite "^1.0.30001219"
+    colorette "^1.2.2"
+    electron-to-chromium "^1.3.723"
     escalade "^3.1.1"
-    node-releases "^1.1.66"
-
-browserslist@^4.16.3:
-  version "4.16.3"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.16.3.tgz#340aa46940d7db878748567c5dea24a48ddf3717"
-  integrity sha512-vIyhWmIkULaq04Gt93txdh+j02yX/JzlyhLYbV3YQCn/zvES3JnY7TifHHvvr1w5hTDluNKMkV05cs4vy8Q7sw==
-  dependencies:
-    caniuse-lite "^1.0.30001181"
-    colorette "^1.2.1"
-    electron-to-chromium "^1.3.649"
-    escalade "^3.1.1"
-    node-releases "^1.1.70"
+    node-releases "^1.1.71"
 
 bser@2.1.1:
   version "2.1.1"
@@ -2945,15 +2934,10 @@ camelcase@^6.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-6.0.0.tgz#5259f7c30e35e278f1bdc2a4d91230b37cad981e"
   integrity sha512-8KMDF1Vz2gzOq54ONPJS65IvTUaB1cHJ2DMM7MbPmLZljDH1qpzzLsWdiN9pHh6qvkRVDTi/07+eNGch/oLU4w==
 
-caniuse-lite@^1.0.30001157:
-  version "1.0.30001159"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001159.tgz#bebde28f893fa9594dadcaa7d6b8e2aa0299df20"
-  integrity sha512-w9Ph56jOsS8RL20K9cLND3u/+5WASWdhC/PPrf+V3/HsM3uHOavWOR1Xzakbv4Puo/srmPHudkmCRWM7Aq+/UA==
-
-caniuse-lite@^1.0.30001181:
-  version "1.0.30001194"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001194.tgz#3d16ff3d734a5a7d9818402c28b1f636c5be5bed"
-  integrity sha512-iDUOH+oFeBYk5XawYsPtsx/8fFpndAPUQJC7gBTfxHM8xw5nOZv7ceAD4frS1MKCLUac7QL5wdAJiFQlDRjXlA==
+caniuse-lite@^1.0.30001219:
+  version "1.0.30001243"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001243.tgz#d9250155c91e872186671c523f3ae50cfc94a3aa"
+  integrity sha512-vNxw9mkTBtkmLFnJRv/2rhs1yufpDfCkBZexG3Y0xdOH2Z/eE/85E4Dl5j1YUN34nZVsSp6vVRFQRrez9wJMRA==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -3222,10 +3206,10 @@ color-name@~1.1.4:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-colorette@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.2.1.tgz#4d0b921325c14faf92633086a536db6e89564b1b"
-  integrity sha512-puCDz0CzydiSYOrnXpz/PKd69zRrribezjtE9yd4zvytoRc8+RY/KJPvtPFKZS3E3wP6neGyMe0vOTlHO5L3Pw==
+colorette@^1.2.1, colorette@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.2.2.tgz#cbcc79d5e99caea2dbf10eb3a26fd8b3e6acfa94"
+  integrity sha512-MKGMzyfeuutC/ZJ1cba9NqcNpfeqMUcYmyF1ZFY6/Cn7CNSAKx6a+s48sqLqyAiZuaP2TcqMhoo+dlwFnVxT9w==
 
 colors@^1.3.3:
   version "1.4.0"
@@ -4074,15 +4058,10 @@ electron-rebuild@2.3.5:
     tar "^6.0.5"
     yargs "^16.0.0"
 
-electron-to-chromium@^1.3.591:
-  version "1.3.603"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.603.tgz#1b71bec27fb940eccd79245f6824c63d5f7e8abf"
-  integrity sha512-J8OHxOeJkoSLgBXfV9BHgKccgfLMHh+CoeRo6wJsi6m0k3otaxS/5vrHpMNSEYY4MISwewqanPOuhAtuE8riQQ==
-
-electron-to-chromium@^1.3.649:
-  version "1.3.679"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.679.tgz#69b45bbf1e0bc2320cb1f3e65b9283e86c4d5e2f"
-  integrity sha512-PNF7JSPAEa/aV2nQLvflRcnIMy31EOuCY87Jbdz0KsUf8O/eFNGpuwgQn2DmyJkKzfQb0zrieanRGWvf/4H+BA==
+electron-to-chromium@^1.3.723:
+  version "1.3.770"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.770.tgz#a9e705a73315f4900880622b3ab76cf1d7221b77"
+  integrity sha512-Kyh8DGK1KfEZuYKIHvuOmrKotsKZQ+qBkDIWHciE3QoFkxXB1KzPP+tfLilSHAfxTON0yYMnFCWkQtUOR7g6KQ==
 
 electron@11.3.0:
   version "11.3.0"
@@ -4224,12 +4203,7 @@ es6-error@^4.1.1:
   resolved "https://registry.yarnpkg.com/es6-error/-/es6-error-4.1.1.tgz#9e3af407459deed47e9a91f9b885a84eb05c561d"
   integrity sha512-Um/+FxMr9CISWh0bi5Zv0iOD+4cFh5qLeks1qhAopKVAJw3drgKbKySikp7wGhDL0HPeaja0P5ULZrxLkniUVg==
 
-escalade@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.0.2.tgz#6a580d70edb87880f22b4c91d0d56078df6962c4"
-  integrity sha512-gPYAU37hYCUhW5euPeR+Y74F7BL+IBsV93j5cvGriSaD1aG6MGsqsV1yamRdrWrb2j3aiZvb0X+UBOWpx3JWtQ==
-
-escalade@^3.1.1:
+escalade@^3.0.2, escalade@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
   integrity sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==
@@ -7548,15 +7522,10 @@ node-pre-gyp@^0.11.0:
     semver "^5.3.0"
     tar "^4"
 
-node-releases@^1.1.66:
-  version "1.1.67"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.67.tgz#28ebfcccd0baa6aad8e8d4d8fe4cbc49ae239c12"
-  integrity sha512-V5QF9noGFl3EymEwUYzO+3NTDpGfQB4ve6Qfnzf3UNydMhjQRVPR1DZTuvWiLzaFJYw2fmDwAfnRNEVb64hSIg==
-
-node-releases@^1.1.70:
-  version "1.1.71"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.71.tgz#cb1334b179896b1c89ecfdd4b725fb7bbdfc7dbb"
-  integrity sha512-zR6HoT6LrLCRBwukmrVbHv0EpEQjksO6GmFcZQQuCAy139BEsoVKPYnf3jongYW83fAa1torLGYwxxky/p28sg==
+node-releases@^1.1.71:
+  version "1.1.73"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.73.tgz#dd4e81ddd5277ff846b80b52bb40c49edf7a7b20"
+  integrity sha512-uW7fodD6pyW2FZNZnp/Z3hvWKeEW1Y8R1+1CnErE8cXFXzl5blBOoVB41CvMer6P6Q0S5FXDwcHgFd1Wj0U9zg==
 
 noop-logger@^0.1.1:
   version "0.1.1"
