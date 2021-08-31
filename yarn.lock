@@ -1761,11 +1761,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.31.tgz#72286bd33d137aa0d152d47ec7c1762563d34055"
   integrity sha512-vFHy/ezP5qI0rFgJ7aQnjDXwAMrG0KqqIH7tQG5PPv3BWBayOPIQNBjVc/P6hhdZfMx51REc6tfDNXHUio893g==
 
-"@types/node@9.x":
-  version "9.6.55"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.55.tgz#7cc1358c9c18e71f6c020e410962971863232cf5"
-  integrity sha512-e/5tg8Ok0gSrN6pvHphnwTK0/CD9VPZrtZqpvvpEFAtfs+ZntusgGaWkf2lSEq1OFe2EDPeUMiMVpy4nZpJ4AQ==
-
 "@types/node@^12.0.12":
   version "12.12.35"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.35.tgz#1e61b226c14380f4384f70cfe49a65c2c553ad2b"
@@ -2764,7 +2759,7 @@ bl@^4.0.1:
     inherits "^2.0.4"
     readable-stream "^3.4.0"
 
-bluebird@^3.5.1, bluebird@^3.5.5:
+bluebird@^3.5.5:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
@@ -8350,15 +8345,12 @@ pkg-dir@^4.1.0, pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
-plaid@8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/plaid/-/plaid-8.2.0.tgz#fcf781c21918b1acf8aec85c4c5818ca2ab75d4f"
-  integrity sha512-Vjz5gpGtved+maEo/QWPRGhvJy/wz7GCqchaiLbKe9vqYV38vHpueGr9dfVQouLdB2dIJeyIcN4yXU39WxHvgw==
+plaid@9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/plaid/-/plaid-9.1.0.tgz#7007ab2871120ef31a065780e3d4ebc75f682ac2"
+  integrity sha512-8M0tdnn9tPBUpT/f0SXiMkZk7/JqkWRaPmoads+DHXPw4Z0WnI1hHQkhMXGChS1xXq3nAqkRH962Q1Okvt+Ilg==
   dependencies:
-    "@types/node" "9.x"
     axios "0.21.1"
-    bluebird "^3.5.1"
-    ramda "0.23.x"
 
 please-upgrade-node@^3.2.0:
   version "3.2.0"
@@ -8598,11 +8590,6 @@ quick-lru@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
-
-ramda@0.23.x:
-  version "0.23.0"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.23.0.tgz#ccd13fff73497a93974e3e86327bfd87bd6e8e2b"
-  integrity sha1-zNE//3NJepOXTj6GMnv9h71ujis=
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
