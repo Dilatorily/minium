@@ -1881,10 +1881,10 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@types/zeromq@4.6.3":
-  version "4.6.3"
-  resolved "https://registry.yarnpkg.com/@types/zeromq/-/zeromq-4.6.3.tgz#1d2e7504878bfb6ff289f0cc4edc3066ecb01f32"
-  integrity sha512-nuCaHBIvIi94LJygkHlLXv7dDK9ocNEKvOoa16n/XxXJhQHf5JX8Hd0Aq4fqhmY+2rAcBfsAFmQfqWWMuB7qUQ==
+"@types/zeromq@5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@types/zeromq/-/zeromq-5.2.0.tgz#c8b5e0e16065abecde1daafff9ddd0d022d5e774"
+  integrity sha512-XdppLQKwGqZYxZNLB7RpG4bLCwO2Xl8OJ+8zZ6ECnrf5eR252HVkqhFx6lALZOUob+H586KKJBZwP0YJtbT0cg==
   dependencies:
     "@types/node" "*"
 
